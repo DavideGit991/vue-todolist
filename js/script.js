@@ -13,7 +13,8 @@ var app =new Vue(
  data:
  {
   input:'',
-  toDoList:[]
+  toDoList:[],
+
  },
  methods:
  {
@@ -23,6 +24,12 @@ var app =new Vue(
   this.toDoList.push({name:todo});
   this.input = '';
   console.log(this.toDoList);
+  },
+  removeToDo(item)
+  {
+    let index = this.toDoList.indexOf(item);
+    this.toDoList.splice(index,1);
+    console.log(this.toDoList);
   }
 }
 

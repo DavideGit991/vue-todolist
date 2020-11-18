@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="css/main.css">
     <meta charset="utf-8">
@@ -18,7 +19,11 @@
       <div class="section">
         <div class="container-todo">
           <ul>
-            <li v-for="elem in toDoList" :key="elem.key">{{elem.name}}</li>
+            <li v-for="(item,i) in toDoList" >
+              {{item.name}}
+              <span><i @click='removeToDo(item)' class="fas fa-trash-alt"></i></span>
+            </li>
+
           </ul>
         </div>
       </div>
