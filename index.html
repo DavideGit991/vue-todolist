@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <main id="app">
+      <!-- inserimento nella ToDoList -->
+      <div class="section">
+        <input v-model="input" type="text" name="" value="" @keyup.enter="addToDo">
+        <button @click="addToDo" class="btn" type="button" name="button">Inserisci</button>
+      </div>
+
+      <!-- ToDoList -->
+      <div class="section">
+
+      </div>
+    </main>
+
+
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
+  </body>
+</html>
