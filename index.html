@@ -28,7 +28,7 @@
         <div class="container todoList-box">
           <ul>
             <li v-for="(item,i) in toDoList" >
-              <span>{{item.name}}</span>
+              <span @click="selectItem" :class='strike'> {{item.name}} </span>
               <span><i @click='removeToDo(item)' class="fas fa-trash-alt"></i></span>
             </li>
           </ul>

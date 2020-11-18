@@ -14,6 +14,8 @@ var app =new Vue(
  {
   input:'',
   toDoList:[],
+  // toDoListSelect:[],
+  strike:''
  },
  methods:
  {
@@ -29,8 +31,10 @@ var app =new Vue(
     let index = this.toDoList.indexOf(item);
     this.toDoList.splice(index,1);
     console.log(this.toDoList);
-  }
-}
-
+  },
+  selectItem()
+  //salvare l'elemento tramite l'index in un elemento e poi creare il bottone oer togliere solo gli elementi selezionati
+  { this.strike === ''? this.strike='strike': this.strike='' }
+ }
 }
 );

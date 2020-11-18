@@ -60,6 +60,10 @@ ul li:hover{
   cursor: pointer;
   background-color: lightgray;
 }
+
+.strike{
+  text-decoration: line-through;
+}
 span{
   font-size: 25px;
 }
