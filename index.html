@@ -10,13 +10,17 @@
     <main id="app">
       <!-- inserimento nella ToDoList -->
       <div class="section">
-        <input v-model="input" type="text" name="" value="" @keyup.enter="addToDo">
+        <input v-model="input" type="text" name="" value="" @keyup.enter="addToDo" placeholder="Inserisci cosa da fare">
         <button @click="addToDo" class="btn" type="button" name="button">Inserisci</button>
       </div>
 
       <!-- ToDoList -->
       <div class="section">
-
+        <div class="container-todo">
+          <ul>
+            <li v-for="elem in toDoList" :key="elem.key">{{elem.name}}</li>
+          </ul>
+        </div>
       </div>
     </main>
 
