@@ -9,24 +9,31 @@
   </head>
   <body>
     <main id="app">
+      <section>
+        <div class="container">
+          <img src="https://cdn.pixabay.com/photo/2016/06/20/22/24/robot-1470108_960_720.png" alt="">
+        </div>
+      </section>
+
       <!-- inserimento nella ToDoList -->
-      <div class="section">
-        <input v-model="input" type="text" name="" value="" @keyup.enter="addToDo" placeholder="Inserisci cosa da fare">
-        <button @click="addToDo" class="btn" type="button" name="button">Inserisci</button>
-      </div>
+      <section>
+        <div class="container input">
+          <input v-model="input" type="text" name="" value="" @keyup.enter="addToDo" placeholder="Inserisci cosa da fare">
+          <button class="btn" @click="addToDo" class="btn" type="button" name="button">Inserisci</button>
+        </div>
+      </section>
 
       <!-- ToDoList -->
-      <div class="section">
-        <div class="container-todo">
+      <section>
+        <div class="container todoList-box">
           <ul>
             <li v-for="(item,i) in toDoList" >
-              {{item.name}}
+              <span>{{item.name}}</span>
               <span><i @click='removeToDo(item)' class="fas fa-trash-alt"></i></span>
             </li>
-
           </ul>
         </div>
-      </div>
+      </section>
     </main>
 
 

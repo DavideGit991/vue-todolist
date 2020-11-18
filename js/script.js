@@ -14,7 +14,6 @@ var app =new Vue(
  {
   input:'',
   toDoList:[],
-
  },
  methods:
  {
@@ -32,11 +31,6 @@ var app =new Vue(
     console.log(this.toDoList);
   }
 }
-
-
-
-
-
 
 }
 );
