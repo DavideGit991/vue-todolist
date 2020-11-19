@@ -65,9 +65,13 @@ ul li{
 .left input{
   margin-right: 10px;
 }
-ul li:hover{
+ul li input:hover{
   cursor: pointer;
-  background-color: rgb(220,220,220,0.2);
+  transform: scale(1.4);
+}
+.right i:hover{
+  cursor: pointer;
+  transform: scale(1.4);
 }
 .linecomplete{
 background-color: rgb(144,238,144, 0.6);

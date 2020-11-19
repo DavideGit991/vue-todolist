@@ -14,10 +14,11 @@ var app =new Vue(
  {
   input:'',
   toDoList:[],
+  toDoListComplete:[]
  },
  methods:
  {
-  addToDo(todo)
+  addToDo()
   {
   todo = this.input;
   this.toDoList.push({name:todo, complete:false});
@@ -30,14 +31,15 @@ var app =new Vue(
     this.toDoList.splice(index,1);
     console.log(this.toDoList);
   },
-  toggle(item)
+  toggle(item, i)
   {
      item.complete = !item.complete;
-     console.log(this.toDoList);
+     this.toDoListComplete.push(item);
+     console.log(this.toDoListComplete);
   },
-  removeComplete(item i)
+  removeComplete()
   {
-    Vue.delete(this.todolist, i);
+    
   }
  }
 }
