@@ -7,7 +7,7 @@ main section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 100vw;
   margin: 0 auto;
 }
 img{
@@ -22,12 +22,12 @@ img{
   margin: 2%
 }
 .container.input{
-  width: 25%;
+  width: 30%;
   justify-content: space-around;
 }
 input{
   padding: 10px;
-  padding-right: 30px;
+  padding-right: 250px;
   border-radius: 5px;
   border-color: #000;
 }

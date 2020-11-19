@@ -20,7 +20,7 @@ var app =new Vue(
  {
   addToDo()
   {
-  ( this.input !== "" || this.toDoList.icludes(this.input) == false)? this.toDoList.push({name:this.input, complete:false}):alert('REINSERISCI UN DATO VALIDO');
+  ( this.input !== "")? this.toDoList.push({name:this.input, complete:false}) : alert('REINSERISCI UN DATO VALIDO');
    this.input = '';
   },
   removeToDo(item,i)
@@ -33,7 +33,7 @@ var app =new Vue(
   },
   removeComplete()
   {
-    this.toDoList = this.toDoList.filter((elem)=>{ return elem.complete === false});
+    this.toDoList = this.toDoList.filter((elem)=>{return elem.complete === false});
   }
  }
 }
