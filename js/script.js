@@ -25,21 +25,24 @@ var app =new Vue(
   this.input = '';
   // console.log(this.toDoList);
   },
-  removeToDo(item)
+  removeToDo(item,i)
   {
-    let index = this.toDoList.indexOf(item);
-    this.toDoList.splice(index,1);
-    console.log(this.toDoList);
+    let index = this.toDoListComplete.indexOf(item.name);
+    this.toDoList.splice(i,1);
+    this.toDoListComplete.splice(index,1);
+    console.log("lista completati: ", this.toDoListComplete);
   },
-  toggle(item, i)
+  toggle(item,i)
   {
+     let index = this.toDoListComplete.indexOf(item.name);
      item.complete = !item.complete;
-     this.toDoListComplete.push(item);
-     console.log(this.toDoListComplete);
+     (item.complete===true)? this.toDoListComplete.push(item) : this.toDoListComplete.splice(index);
+
+     console.log("lista completati: ",this.toDoListComplete);
   },
   removeComplete()
   {
-    
+
   }
  }
 }
