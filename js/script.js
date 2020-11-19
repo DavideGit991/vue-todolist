@@ -20,19 +20,16 @@ var app =new Vue(
  {
   addToDo()
   {
-   ( this.input !== "")? this.toDoList.push({name:this.input, complete:false}):alert('REINSERISCI UN DATO');
+  ( this.input !== "" || this.toDoList.icludes(this.input) == false)? this.toDoList.push({name:this.input, complete:false}):alert('REINSERISCI UN DATO VALIDO');
    this.input = '';
-  // console.log(this.toDoList);
   },
   removeToDo(item,i)
   {
     this.toDoList.splice(i,1);
-    console.log("lista completati: ", this.toDoListComplete);
   },
   toggle(item,i)
   {
      item.complete = !item.complete;
-     console.log("lista completati: ",this.toDoListComplete);
   },
   removeComplete()
   {
