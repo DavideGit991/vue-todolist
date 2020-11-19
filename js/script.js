@@ -14,35 +14,29 @@ var app =new Vue(
  {
   input:'',
   toDoList:[],
-  toDoListComplete:[]
+  // toDoListComplete:[]
  },
  methods:
  {
   addToDo()
   {
-  todo = this.input;
-  this.toDoList.push({name:todo, complete:false});
-  this.input = '';
+   ( this.input !== "")? this.toDoList.push({name:this.input, complete:false}):alert('REINSERISCI UN DATO');
+   this.input = '';
   // console.log(this.toDoList);
   },
   removeToDo(item,i)
   {
-    let index = this.toDoListComplete.indexOf(item.name);
     this.toDoList.splice(i,1);
-    this.toDoListComplete.splice(index,1);
     console.log("lista completati: ", this.toDoListComplete);
   },
   toggle(item,i)
   {
-     let index = this.toDoListComplete.indexOf(item.name);
      item.complete = !item.complete;
-     (item.complete===true)? this.toDoListComplete.push(item) : this.toDoListComplete.splice(index);
-
      console.log("lista completati: ",this.toDoListComplete);
   },
   removeComplete()
   {
-
+    this.toDoList = this.toDoList.filter((elem)=>{ return elem.complete === false});
   }
  }
 }
