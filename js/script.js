@@ -14,27 +14,27 @@ var app =new Vue(
  {
   input:'',
   toDoList:[],
-  // toDoListSelect:[],
-  strike:''
  },
  methods:
  {
   addToDo(todo)
   {
   todo = this.input;
-  this.toDoList.push({name:todo});
+  this.toDoList.push({name:todo ,complete:false});
   this.input = '';
-  console.log(this.toDoList);
+  // console.log(this.toDoList);
   },
-  removeToDo(item)
+  removeToDo(todo)
   {
-    let index = this.toDoList.indexOf(item);
+    let index = this.toDoList.indexOf(todo);
     this.toDoList.splice(index,1);
     console.log(this.toDoList);
   },
-  selectItem()
-  //salvare l'elemento tramite l'index in un elemento e poi creare il bottone oer togliere solo gli elementi selezionati
-  { this.strike === ''? this.strike='strike': this.strike='' }
+  toggle(todo)
+  {
+     todo.complete = !todo.complete;
+     console.log(this.toDoList);
+  }
  }
 }
 );

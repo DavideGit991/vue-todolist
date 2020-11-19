@@ -27,11 +27,19 @@
       <section>
         <div class="container todoList-box">
           <ul>
-            <li v-for="(item,i) in toDoList" >
-              <span @click="selectItem" :class='strike'> {{item.name}} </span>
+            <li v-for="item in toDoList" >
+              <input type="checkbox" @change="toggle(item)" :checked="item.complete" >
+              <span :class="(item.complete === true)? 'strike': '' " >{{item.name}}</span>
               <span><i @click='removeToDo(item)' class="fas fa-trash-alt"></i></span>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- eliminare i Todo selezionati -->
+      <section>
+        <div class="container input">
+          <button class="btn"  class="btn" type="button" name="button">Elimina selezionati</button>
         </div>
       </section>
     </main>
