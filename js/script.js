@@ -20,20 +20,26 @@ var app =new Vue(
   addToDo(todo)
   {
   todo = this.input;
-  this.toDoList.push({name:todo ,complete:false});
+  this.toDoList.push({name:todo, complete:false});
   this.input = '';
   // console.log(this.toDoList);
   },
-  removeToDo(todo)
+  removeToDo(item)
   {
-    let index = this.toDoList.indexOf(todo);
+    let index = this.toDoList.indexOf(item);
     this.toDoList.splice(index,1);
     console.log(this.toDoList);
   },
-  toggle(todo)
+  toggle(item)
   {
-     todo.complete = !todo.complete;
+     item.complete = !item.complete;
      console.log(this.toDoList);
+  },
+  removeComplete(item)
+  {
+
+    // let toDoListComplete = this.toDoList.filter((item,i,array) => array.complete === true});
+    // console.log(toDoListComplete);
   }
  }
 }

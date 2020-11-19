@@ -22,11 +22,14 @@ img{
   margin: 2%
 }
 .container.input{
-  width: 18%;
+  width: 25%;
   justify-content: space-around;
 }
 input{
   padding: 10px;
+  padding-right: 30px;
+  border-radius: 5px;
+  border-color: #000;
 }
 .btn{
   background: none repeat scroll 0 0 #5a88ca;
@@ -34,11 +37,13 @@ input{
   border: medium none;
   color: #fff;
   padding: 11px 20px;
+  border-radius: 5px;
   text-transform: uppercase;
 }
 .btn:hover{
   cursor: pointer;
   background-color: #222;
+
 }
 .container.todolist-box{
   background-color: lightgray;
@@ -55,13 +60,19 @@ ul li{
   font-size: 15px;
   padding: 2%;
   border-bottom: 2px solid black;
+  border-radius: 5px 5px 0 0;
+}
+.left input{
+  margin-right: 10px;
 }
 ul li:hover{
   cursor: pointer;
-  background-color: lightgray;
+  background-color: rgb(220,220,220,0.2);
 }
-
-.strike{
+.linecomplete{
+background-color: rgb(144,238,144, 0.6);
+}
+.complete{
   text-decoration: line-through;
 }
 span{
