@@ -35,11 +35,9 @@ var app =new Vue(
      item.complete = !item.complete;
      console.log(this.toDoList);
   },
-  removeComplete(item)
+  removeComplete(item i)
   {
-
-    // let toDoListComplete = this.toDoList.filter((item,i,array) => array.complete === true});
-    // console.log(toDoListComplete);
+    Vue.delete(this.todolist, i);
   }
  }
 }
