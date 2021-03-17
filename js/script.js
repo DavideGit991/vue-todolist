@@ -7,34 +7,34 @@
 // l’utente non può inserire più volte la stessa “cosa da fare”;
 // etc. etc… quello che vi intriga di più da provare.
 
-var app =new Vue(
-{
- el:"#app",
- data:
- {
-  input:'',
-  toDoList:[],
-  // toDoListComplete:[]
- },
- methods:
- {
-  addToDo()
+  
+  new Vue(
   {
-  ( this.input !== "")? this.toDoList.push({name:this.input, complete:false}) : alert('REINSERISCI UN DATO VALIDO');
-   this.input = '';
-  },
-  removeToDo(item,i)
-  {
-    this.toDoList.splice(i,1);
-  },
-  toggle(item,i)
-  {
-     item.complete = !item.complete;
-  },
-  removeComplete()
-  {
-    this.toDoList = this.toDoList.filter((elem)=>{return elem.complete === false});
+   el:"#app",
+   data:
+   {
+    input:'',
+    toDoList:[],
+    // toDoListComplete:[]
+   },
+   methods:
+   {
+      addToDo()
+      {
+      ( this.input !== "")? this.toDoList.push({name:this.input.toUpperCase(), complete:false}) : alert('REINSERISCI UN DATO VALIDO');
+       this.input = '';},
+  
+      removeToDo(item,i)
+      {
+        this.toDoList.splice(i,1);},
+      
+        toggle(item,i)
+      {
+         item.complete = !item.complete;},
+      
+         removeComplete()
+      {
+        this.toDoList = this.toDoList.filter((elem)=>{return elem.complete === false})}
+   }
   }
- }
-}
-);
+  );

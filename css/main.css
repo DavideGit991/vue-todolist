@@ -3,19 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-main section{
+main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2017/10/27/15/12/geeks-2894621_960_720.jpg'); /* The image used */
+  background-size: cover;
+}
+.main-box{
+  height: 100vh;
+  background-color: rgba(124, 124, 124, 0.4);
+}
+section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  margin: 0 auto;
 }
-img{
-  width: 30%;
-  height: auto;
-  border: 1px solid #000;
-  border-radius: 5px;
+.first{
+  padding-top: 15px;
 }
+
 .container{
   width: 80%;
   display: flex;
@@ -23,28 +29,37 @@ img{
   margin: 2%
 }
 .container.input{
-  width: 60%;
+  justify-content: space-around;
+  width: 50%;
+}
+#todo{
+  width: 50%;
 }
 input{
-  width:  50%;
   padding: 5px;
   border-radius: 5px;
-  border-color: #000;
+  border-color: rgb(213, 248, 55,0.5);
+}
+input:focus{
+  border-color: rgb(213, 248, 55,0.5);
+  color: blue;
+  font-weight: bold;
 }
 .btn{
-  background: none repeat scroll 0 0 #5a88ca;
-  background-color: rgb(90, 136, 202);
+  background-color: rgb(213, 248, 55,0.7);
+  font-weight: bold;
   border: medium none;
-  color: #fff;
+  color: blue;
   padding: 11px 20px;
   border-radius: 5px;
   text-transform: uppercase;
 }
 .btn:hover{
   cursor: pointer;
-  background-color: #222;
-
+  background-color: blue;
+  color:rgb(213, 248, 55) ;
 }
+
 .container.todolist-box{
   background-color: lightgray;
   justify-content: space-around;
@@ -58,16 +73,23 @@ ul{
 }
 ul li{
   display: flex;
+  background-color:rgb(213, 248, 55,0.5); 
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  font-size: 15px;
-  padding: 2%;
-  border-bottom: 2px solid black;
-  border-radius: 5px 5px 0 0;
+  padding: 1%;
+  margin-bottom: 3px;
+  border-radius: 5px;
 }
 .left{
   display: flex;
+  align-items: center;
+  width: 90%;
+}
+.left span{
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
 }
 .left input{
   margin-right: 10px;
@@ -86,9 +108,7 @@ background-color: rgb(144,238,144, 0.6);
 .complete{
   text-decoration: line-through;
 }
-span{
-  font-size: 25px;
-}
 span i{
   color: red;
+  font-size: 20px;
 }
